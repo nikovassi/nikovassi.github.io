@@ -6,6 +6,19 @@
 <title>Nikolay Vasilev — личен блог</title>
 <meta name="description" content="Личен блог на Николай Василев — мисли за технологии, кариера и живота.">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('nv-theme');
+    if (t !== 'light' && t !== 'dark') {
+      t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,12 +34,16 @@
     </a>
     <nav>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link">Начало</a></li>
-        <li><a href="#about" class="nav-link">За мен</a></li>
-        <li><a href="#blog" class="nav-link">Блог</a></li>
-        <li><a href="#contact" class="nav-link">Контакти</a></li>
+        <li><a href="#home" class="nav-link" data-i18n="nav.home">Начало</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">За мен</a></li>
+        <li><a href="#blog" class="nav-link" data-i18n="nav.blog">Блог</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Контакти</a></li>
       </ul>
     </nav>
+    <div class="nav-controls">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Смени темата" title="Смени темата">🌙</button>
+      <button class="icon-btn lang-btn" id="langToggle" type="button" aria-label="Смени езика" title="Смени езика">EN</button>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -38,12 +55,12 @@
   <section class="hero" id="home">
     <div class="container">
       <div class="reveal in-view">
-        <span class="eyebrow">Добре дошли</span>
-        <h1 class="hero-title">Здравей, аз съм <span class="accent">Николай</span>.</h1>
-        <p class="hero-subtitle">Тук пиша за нещата, които ме вълнуват — технологии, кариера и живота между тях. Малко лични бележки, малко наученото по трудния начин.</p>
+        <span class="eyebrow" data-i18n="hero.eyebrow">Добре дошли</span>
+        <h1 class="hero-title" id="heroTitle">Здравей, аз съм <span class="accent">Николай</span>.</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Тук пиша за нещата, които ме вълнуват — технологии, кариера и живота между тях. Малко лични бележки, малко наученото по трудния начин.</p>
         <div class="hero-actions">
-          <a href="#blog" class="btn btn-primary">Виж блога</a>
-          <a href="#about" class="btn btn-ghost">За мен</a>
+          <a href="#blog" class="btn btn-primary" data-i18n="hero.cta.blog">Виж блога</a>
+          <a href="#about" class="btn btn-ghost" data-i18n="hero.cta.about">За мен</a>
         </div>
       </div>
       <div class="hero-portrait reveal in-view">
@@ -58,19 +75,19 @@
         <img src="images/about-placeholder.svg" alt="Николай Василев">
       </div>
       <div class="about-text reveal">
-        <span class="eyebrow">За мен</span>
-        <h3>Няколко думи за мен</h3>
-        <p>
+        <span class="eyebrow" data-i18n="about.eyebrow">За мен</span>
+        <h3 data-i18n="about.heading">Няколко думи за мен</h3>
+        <p data-i18n="about.p1">
           [Тук ще добавиш кратко представяне — кой си, с какво се занимаваш и какво те вдъхновява да пишеш. Два-три абзаца са напълно достатъчни.]
         </p>
-        <p>
+        <p data-i18n="about.p2">
           [Може да добавиш и с какво точно се занимаваш професионално, какви теми те вълнуват в блога, и какво искаш читателите да намерят тук.]
         </p>
         <ul class="about-facts">
-          <li><strong>Живее в</strong>България</li>
-          <li><strong>Пише за</strong>технологии, кариера, живот</li>
-          <li><strong>Обича</strong>[твое хоби]</li>
-          <li><strong>В момента</strong>[с какво се занимаваш]</li>
+          <li><strong data-i18n="about.fact1.label">Живее в</strong><span data-i18n="about.fact1.value">България</span></li>
+          <li><strong data-i18n="about.fact2.label">Пише за</strong><span data-i18n="about.fact2.value">технологии, кариера, живот</span></li>
+          <li><strong data-i18n="about.fact3.label">Обича</strong><span data-i18n="about.fact3.value">[твое хоби]</span></li>
+          <li><strong data-i18n="about.fact4.label">В момента</strong><span data-i18n="about.fact4.value">[с какво се занимаваш]</span></li>
         </ul>
       </div>
     </div>
@@ -79,25 +96,25 @@
   <section id="blog">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">Блог</span>
-        <h2>Последни статии</h2>
-        <p>Директно от repository-то — качваш нова статия в GitHub и тя се появява тук автоматично.</p>
+        <span class="eyebrow" data-i18n="blog.eyebrow">Блог</span>
+        <h2 data-i18n="blog.heading">Последни статии</h2>
+        <p data-i18n="blog.desc">Директно от repository-то — качваш нова статия в GitHub и тя се появява тук автоматично.</p>
       </div>
       <div class="blog-grid" id="blogGrid">
-        <p class="empty-msg">Зареждане на статиите…</p>
+        <p class="empty-msg" data-i18n="blog.loading">Зареждане на статиите…</p>
       </div>
     </div>
   </section>
 
   <section class="contact" id="contact">
     <div class="container">
-      <span class="eyebrow">Контакти</span>
-      <h2>Да се свържем</h2>
-      <p>Ако искаш да обсъдим нещо от блога или просто да си кажем здравей — пиши ми.</p>
+      <span class="eyebrow" data-i18n="contact.eyebrow">Контакти</span>
+      <h2 data-i18n="contact.heading">Да се свържем</h2>
+      <p data-i18n="contact.desc">Ако искаш да обсъдим нещо от блога или просто да си кажем здравей — пиши ми.</p>
       <div class="social-links">
-        <a href="mailto:your-email@example.com">✉️ Имейл</a>
-        <a href="https://github.com/nikovassi" target="_blank" rel="noopener">💻 GitHub</a>
-        <a href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a href="mailto:your-email@example.com" data-i18n="contact.email">✉️ Имейл</a>
+        <a href="https://github.com/nikovassi" target="_blank" rel="noopener" data-i18n="contact.github">💻 GitHub</a>
+        <a href="#" target="_blank" rel="noopener" data-i18n="contact.linkedin">💼 LinkedIn</a>
       </div>
     </div>
   </section>
@@ -106,7 +123,7 @@
 
 <footer class="site-footer">
   <div class="container">
-    &copy; <span id="year"></span> Nikolay Vasilev. Направено с ♥ и хоствано на GitHub Pages.
+    &copy; <span id="year"></span> Nikolay Vasilev. <span data-i18n="footer.tagline">Направено с ♥ и хоствано на GitHub Pages.</span>
   </div>
 </footer>
 
