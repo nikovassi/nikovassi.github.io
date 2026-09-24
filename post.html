@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Статия — Nikolay Vasilev</title>
+<meta name="description" content="Статия от личния блог на Николай Василев.">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="index.html#home" class="brand">
+      <span class="brand-mark">NV</span>
+      <span>Nikolay Vasilev</span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" class="nav-link">Начало</a></li>
+        <li><a href="index.html#about" class="nav-link">За мен</a></li>
+        <li><a href="index.html#blog" class="nav-link">Блог</a></li>
+        <li><a href="index.html#contact" class="nav-link">Контакти</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="article-header">
+    <div class="container">
+      <a href="index.html#blog" class="back-link">← Обратно към блога</a>
+      <div id="postMeta">
+        <span class="post-date" id="postDate"></span>
+        <h1 id="postTitle">Зареждане…</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-cover" id="articleCover" hidden>
+    <img id="postCoverImg" src="" alt="">
+  </div>
+
+  <article class="article-body" id="postContent">
+    <p class="empty-msg">Зареждане на статията…</p>
+  </article>
+
+  <div class="article-footer">
+    <a href="index.html#blog" class="btn btn-ghost">← Всички статии</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    &copy; <span id="year"></span> Nikolay Vasilev. Направено с ♥ и хоствано на GitHub Pages.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

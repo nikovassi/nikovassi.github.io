@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikolay Vasilev — личен блог</title>
+<meta name="description" content="Личен блог на Николай Василев — мисли за технологии, кариера и живота.">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="#home" class="brand">
+      <span class="brand-mark">NV</span>
+      <span>Nikolay Vasilev</span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Начало</a></li>
+        <li><a href="#about" class="nav-link">За мен</a></li>
+        <li><a href="#blog" class="nav-link">Блог</a></li>
+        <li><a href="#contact" class="nav-link">Контакти</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="reveal in-view">
+        <span class="eyebrow">Добре дошли</span>
+        <h1 class="hero-title">Здравей, аз съм <span class="accent">Николай</span>.</h1>
+        <p class="hero-subtitle">Тук пиша за нещата, които ме вълнуват — технологии, кариера и живота между тях. Малко лични бележки, малко наученото по трудния начин.</p>
+        <div class="hero-actions">
+          <a href="#blog" class="btn btn-primary">Виж блога</a>
+          <a href="#about" class="btn btn-ghost">За мен</a>
+        </div>
+      </div>
+      <div class="hero-portrait reveal in-view">
+        <img src="images/avatar-placeholder.svg" alt="Николай Василев">
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-photo reveal">
+        <img src="images/about-placeholder.svg" alt="Николай Василев">
+      </div>
+      <div class="about-text reveal">
+        <span class="eyebrow">За мен</span>
+        <h3>Няколко думи за мен</h3>
+        <p>
+          [Тук ще добавиш кратко представяне — кой си, с какво се занимаваш и какво те вдъхновява да пишеш. Два-три абзаца са напълно достатъчни.]
+        </p>
+        <p>
+          [Може да добавиш и с какво точно се занимаваш професионално, какви теми те вълнуват в блога, и какво искаш читателите да намерят тук.]
+        </p>
+        <ul class="about-facts">
+          <li><strong>Живее в</strong>България</li>
+          <li><strong>Пише за</strong>технологии, кариера, живот</li>
+          <li><strong>Обича</strong>[твое хоби]</li>
+          <li><strong>В момента</strong>[с какво се занимаваш]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Блог</span>
+        <h2>Последни статии</h2>
+        <p>Директно от repository-то — качваш нова статия в GitHub и тя се появява тук автоматично.</p>
+      </div>
+      <div class="blog-grid" id="blogGrid">
+        <p class="empty-msg">Зареждане на статиите…</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <span class="eyebrow">Контакти</span>
+      <h2>Да се свържем</h2>
+      <p>Ако искаш да обсъдим нещо от блога или просто да си кажем здравей — пиши ми.</p>
+      <div class="social-links">
+        <a href="mailto:your-email@example.com">✉️ Имейл</a>
+        <a href="https://github.com/nikovassi" target="_blank" rel="noopener">💻 GitHub</a>
+        <a href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    &copy; <span id="year"></span> Nikolay Vasilev. Направено с ♥ и хоствано на GitHub Pages.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
