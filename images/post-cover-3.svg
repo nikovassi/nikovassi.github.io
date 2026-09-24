@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="c3" cx="30%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#1a2a2a"/>
+      <stop offset="100%" stop-color="#0b0d12"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#c3)"/>
+  <polygon points="80,420 260,240 380,340 560,140 720,320 720,460 80,460" fill="#2dd4bf" fill-opacity="0.10"/>
+  <polygon points="80,440 260,300 380,380 560,220 720,360 720,460 80,460" fill="#2563eb" fill-opacity="0.12"/>
+  <text x="400" y="230" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#e5e7eb" text-anchor="middle" opacity="0.85">Как поддържам блога</text>
+</svg>
