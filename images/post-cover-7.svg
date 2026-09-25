@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="c7" cx="70%" cy="25%" r="85%">
+      <stop offset="0%" stop-color="#2a1f3a"/>
+      <stop offset="100%" stop-color="#0b0d12"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#c7)"/>
+  <circle cx="600" cy="140" r="170" fill="#2563eb" fill-opacity="0.12"/>
+  <rect x="140" y="150" width="90" height="90" rx="10" fill="none" stroke="#2dd4bf" stroke-opacity="0.35" stroke-width="3"/>
+  <rect x="270" y="220" width="90" height="90" rx="10" fill="none" stroke="#2dd4bf" stroke-opacity="0.5" stroke-width="3"/>
+  <rect x="400" y="160" width="90" height="90" rx="10" fill="none" stroke="#2dd4bf" stroke-opacity="0.35" stroke-width="3"/>
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#e5e7eb" text-anchor="middle" opacity="0.85">Професиите на бъдещето</text>
+</svg>
