@@ -795,3 +795,15 @@ section {
     font-size: 0.85rem;
   }
 }
+
+
+/* Theme-reactive logo swap (site's own data-theme toggle, not OS preference) */
+.brand-logo-dark {
+  display: none;
+}
+:root[data-theme="dark"] .brand-logo-light {
+  display: none;
+}
+:root[data-theme="dark"] .brand-logo-dark {
+  display: inline-block;
+}
