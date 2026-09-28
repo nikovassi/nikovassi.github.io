@@ -249,7 +249,7 @@ section {
   position: relative;
   min-height: 780px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   padding-top: 81px;
   padding-bottom: 56px;
   overflow: hidden;
@@ -294,7 +294,7 @@ section {
 }
 
 .hero-content {
-  max-width: 720px;
+  max-width: 820px;
   margin: 0 auto;
   text-align: center;
 }
@@ -310,14 +310,16 @@ section {
 }
 
 .hero .eyebrow {
-  margin-bottom: 10px;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  margin-bottom: 16px;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 3.4rem;
   font-weight: 800;
   line-height: 1.08;
-  margin: 0 0 14px;
+  margin: 0 0 20px;
   letter-spacing: -0.02em;
   color: #f5f7fa;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
@@ -328,10 +330,10 @@ section {
 }
 
 .hero-subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: rgba(245, 247, 250, 0.86);
-  max-width: 64ch;
-  margin: 0 0 22px;
+  max-width: 72ch;
+  margin: 0 0 30px;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -340,6 +342,11 @@ section {
   gap: 14px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.hero-actions .btn {
+  font-size: 1.05rem;
+  padding: 15px 28px;
 }
 
 .hero .btn-ghost {
@@ -785,14 +792,14 @@ section {
   }
 
   .hero-title {
-    font-size: 1.9rem;
-    margin: 0 0 10px;
+    font-size: 2.3rem;
+    margin: 0 0 14px;
   }
 
   .hero-subtitle {
-    font-size: 0.92rem;
-    max-width: 46ch;
-    margin: 0 0 18px;
+    font-size: 1.05rem;
+    max-width: 50ch;
+    margin: 0 0 22px;
   }
 
   .hero-scrim {
