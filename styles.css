@@ -250,7 +250,7 @@ section {
   min-height: 780px;
   display: flex;
   align-items: flex-end;
-  padding-top: 96px;
+  padding-top: 81px;
   padding-bottom: 56px;
   overflow: hidden;
   isolation: isolate;
@@ -258,7 +258,7 @@ section {
 
 .hero-media {
   position: absolute;
-  top: 96px;
+  top: 81px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -275,7 +275,7 @@ section {
 
 .hero-scrim {
   position: absolute;
-  top: 96px;
+  top: 81px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -772,7 +772,7 @@ section {
 
   .hero {
     min-height: 780px;
-    padding-top: 96px;
+    padding-top: 81px;
     padding-bottom: 56px;
   }
 
