@@ -281,11 +281,11 @@ section {
   bottom: 0;
   z-index: 1;
   background: linear-gradient(0deg,
-    rgba(6, 8, 12, 0.90) 0%,
-    rgba(6, 8, 12, 0.70) 20%,
-    rgba(6, 8, 12, 0.30) 40%,
-    rgba(6, 8, 12, 0.05) 60%,
-    rgba(6, 8, 12, 0) 75%);
+    rgba(6, 8, 12, 0.92) 0%,
+    rgba(6, 8, 12, 0.86) 15%,
+    rgba(6, 8, 12, 0.80) 50%,
+    rgba(6, 8, 12, 0.70) 85%,
+    rgba(6, 8, 12, 0.48) 100%);
 }
 
 .hero .container {
@@ -805,10 +805,10 @@ section {
   .hero-scrim {
     background: linear-gradient(0deg,
       rgba(6, 8, 12, 0.92) 0%,
-      rgba(6, 8, 12, 0.72) 20%,
-      rgba(6, 8, 12, 0.35) 35%,
-      rgba(6, 8, 12, 0.08) 50%,
-      rgba(6, 8, 12, 0) 65%);
+      rgba(6, 8, 12, 0.86) 15%,
+      rgba(6, 8, 12, 0.80) 50%,
+      rgba(6, 8, 12, 0.70) 85%,
+      rgba(6, 8, 12, 0.48) 100%);
   }
 
   .about-grid {
