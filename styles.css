@@ -38,6 +38,12 @@
   --accent-strong: #0f766e;
 }
 
+:root[data-theme="light"] .site-header {
+  background: rgba(247, 248, 250, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom-color: var(--border);
+}
+
 :root[data-theme="light"] .site-header.scrolled {
   background: rgba(247, 248, 250, 0.85);
 }
@@ -114,9 +120,10 @@ section {
   right: 0;
   z-index: 100;
   padding: 20px 0;
-  background: transparent;
+  background: rgba(11, 13, 18, 0.85);
+  backdrop-filter: blur(10px);
   transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--border);
 }
 
 .site-header.scrolled {
@@ -240,10 +247,10 @@ section {
 /* ---------------- Hero ---------------- */
 .hero {
   position: relative;
-  min-height: 900px;
+  min-height: 780px;
   display: flex;
-  align-items: flex-start;
-  padding-top: 88px;
+  align-items: flex-end;
+  padding-top: 96px;
   padding-bottom: 56px;
   overflow: hidden;
   isolation: isolate;
@@ -251,7 +258,10 @@ section {
 
 .hero-media {
   position: absolute;
-  inset: 0;
+  top: 96px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 0;
 }
 
@@ -259,20 +269,23 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 50%;
   display: block;
 }
 
 .hero-scrim {
   position: absolute;
-  inset: 0;
+  top: 96px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
-  background: linear-gradient(180deg,
+  background: linear-gradient(0deg,
     rgba(6, 8, 12, 0.90) 0%,
-    rgba(6, 8, 12, 0.70) 15%,
-    rgba(6, 8, 12, 0.35) 25%,
-    rgba(6, 8, 12, 0.08) 34%,
-    rgba(6, 8, 12, 0) 42%);
+    rgba(6, 8, 12, 0.70) 20%,
+    rgba(6, 8, 12, 0.30) 40%,
+    rgba(6, 8, 12, 0.05) 60%,
+    rgba(6, 8, 12, 0) 75%);
 }
 
 .hero .container {
@@ -281,7 +294,9 @@ section {
 }
 
 .hero-content {
-  max-width: 780px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .eyebrow {
@@ -324,6 +339,7 @@ section {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero .btn-ghost {
@@ -755,13 +771,13 @@ section {
   }
 
   .hero {
-    min-height: 700px;
-    padding-top: 108px;
-    padding-bottom: 40px;
+    min-height: 780px;
+    padding-top: 96px;
+    padding-bottom: 56px;
   }
 
   .hero-media img {
-    object-position: center 14%;
+    object-position: center 50%;
   }
 
   .hero-content {
@@ -780,12 +796,12 @@ section {
   }
 
   .hero-scrim {
-    background: linear-gradient(180deg,
+    background: linear-gradient(0deg,
       rgba(6, 8, 12, 0.92) 0%,
       rgba(6, 8, 12, 0.72) 20%,
-      rgba(6, 8, 12, 0.35) 33%,
-      rgba(6, 8, 12, 0.08) 44%,
-      rgba(6, 8, 12, 0) 54%);
+      rgba(6, 8, 12, 0.35) 35%,
+      rgba(6, 8, 12, 0.08) 50%,
+      rgba(6, 8, 12, 0) 65%);
   }
 
   .about-grid {
